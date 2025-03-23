@@ -1,0 +1,369 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://product-compatibility.com#"
+     xml:base="https://product-compatibility.com"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:pcm="https://product-compatibility.com#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:http="http://"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://product-compatibility.com"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema#date -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://product-compatibility.com#combines -->
+
+    <owl:ObjectProperty rdf:about="https://product-compatibility.com#combines">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Validation"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#Interface"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#Product"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://product-compatibility.com#hasAvailability -->
+
+    <owl:ObjectProperty rdf:about="https://product-compatibility.com#hasAvailability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Interface"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#Availability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://product-compatibility.com#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="https://product-compatibility.com#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Product"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#Component"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#ComponentConfig"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://product-compatibility.com#hasConstraint -->
+
+    <owl:ObjectProperty rdf:about="https://product-compatibility.com#hasConstraint">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Validation"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#Constraint"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://product-compatibility.com#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="https://product-compatibility.com#hasFeature">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Component"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Product"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#Feature"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://product-compatibility.com#hasResult -->
+
+    <owl:ObjectProperty rdf:about="https://product-compatibility.com#hasResult">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Validation"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#Result"/>
+    </owl:ObjectProperty>
+    
+
+    <!-- https://product-compatibility.com#hasStatus -->
+
+    <owl:ObjectProperty rdf:about="https://product-compatibility.com#hasStatus">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Validation"/>
+        <rdfs:range rdf:resource="https://product-compatibility.com#Status"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- https://product-compatibility.com#brand -->
+
+    <owl:DatatypeProperty rdf:about="https://product-compatibility.com#brand">
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Component"/>
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://product-compatibility.com#model -->
+
+    <owl:DatatypeProperty rdf:about="https://product-compatibility.com#model">
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Product"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://product-compatibility.com#testedBy -->
+
+    <owl:DatatypeProperty rdf:about="https://product-compatibility.com#testedBy">
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Validation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#Name"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://product-compatibility.com#testedOn -->
+
+    <owl:DatatypeProperty rdf:about="https://product-compatibility.com#testedOn">
+        <rdfs:domain rdf:resource="https://product-compatibility.com#Validation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#Thing">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://product-compatibility.com#Accessibility -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Accessibility">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Constraint"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Availability -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Availability">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Result"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Component -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Component">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#ComponentConfig -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#ComponentConfig">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Constraint -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Constraint">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Result"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Feature -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Feature">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#FeatureConfig -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#FeatureConfig">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Interface"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Information -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Information">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Interface -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Interface">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#InterfaceRule -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#InterfaceRule">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Product -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Product">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+
+    <!-- https://product-compatibility.com#Result -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Result">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Stability -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Stability">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Constraint"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Status -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Status">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Result"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#TechnicalFit -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#TechnicalFit">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Usability -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Usability">
+        <rdfs:subClassOf rdf:resource="https://product-compatibility.com#Validation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://product-compatibility.com#Validation -->
+
+    <owl:Class rdf:about="https://product-compatibility.com#Validation">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://product-compatibility.com#Compatible -->
+
+    <owl:NamedIndividual rdf:about="https://product-compatibility.com#Compatible">
+        <rdf:type rdf:resource="https://product-compatibility.com#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://product-compatibility.com#CompatibleWithConstraint -->
+
+    <owl:NamedIndividual rdf:about="https://product-compatibility.com#CompatibleWithConstraint">
+        <rdf:type rdf:resource="https://product-compatibility.com#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://product-compatibility.com#NotCompatible -->
+
+    <owl:NamedIndividual rdf:about="https://product-compatibility.com#NotCompatible">
+        <rdf:type rdf:resource="https://product-compatibility.com#Status"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://product-compatibility.com#Optional -->
+
+    <owl:NamedIndividual rdf:about="https://product-compatibility.com#Optional">
+        <rdf:type rdf:resource="https://product-compatibility.com#Availability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://product-compatibility.com#Standard -->
+
+    <owl:NamedIndividual rdf:about="https://product-compatibility.com#Standard">
+        <rdf:type rdf:resource="https://product-compatibility.com#Availability"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
